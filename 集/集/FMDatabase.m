@@ -342,6 +342,8 @@ static int FMDBDatabaseBusyHandler(void *f, int count) {
     
     [_cachedStatements setObject:statements forKey:query];
     
+ 
+    
     FMDBRelease(query);
 }
 

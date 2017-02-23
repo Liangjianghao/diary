@@ -28,7 +28,7 @@
     {
         if (![db tableExists:@"baseData"])
         {
-            [db executeUpdate:@"CREATE TABLE baseData (content text,date text,imgpath text,longitude text,latitude text,userID text)"];
+            [db executeUpdate:@"CREATE TABLE baseData (content text,date text,time text,imgpath text,longitude text,latitude text,userID text)"];
         }
     }
     [db close];
@@ -39,7 +39,7 @@
     FMDatabase * db = [self getBaseDB];
     if ([db open])
     {
-        BOOL res =[db executeUpdate:@"insert into baseData (content,date,imgpath,Longitude,Latitude,userID) values(?,?,?,?,?,?)",[dic objectForKey:@"content"],[dic objectForKey:@"date"],[dic objectForKey:@"imgpath"],[dic objectForKey:@"longitude"],[dic objectForKey:@"latitude"],[dic objectForKey:@"userID"]];
+        BOOL res =[db executeUpdate:@"insert into baseData (content,date,time,imgpath,Longitude,Latitude,userID) values(?,?,?,?,?,?,?)",[dic objectForKey:@"content"],[dic objectForKey:@"date"],[dic objectForKey:@"time"],[dic objectForKey:@"imgpath"],[dic objectForKey:@"longitude"],[dic objectForKey:@"latitude"],[dic objectForKey:@"userID"]];
         if (!res) {
             
                                 block(@"failed");
@@ -91,6 +91,7 @@
             model.longitude = [set stringForColumn:@"longitude"];
             model.latitude = [set stringForColumn:@"latitude"];
             model.userID = [set stringForColumn:@"userID"];
+            model.time = [set stringForColumn:@"time"];
             [dataArray addObject:model];
             
         }

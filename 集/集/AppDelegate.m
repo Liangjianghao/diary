@@ -8,9 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "SecondViewController.h"
-#import "ThirdViewController.h"
-#import "FourthViewController.h"
+
 
 @interface AppDelegate ()
 
@@ -23,39 +21,10 @@
     // Override point for customization after application launch.
     
     ViewController *vc=[[ViewController alloc]init];
-//    SecondViewController *svc=[[SecondViewController alloc]init];
-//    ThirdViewController *tvc=[[ThirdViewController alloc]init];
-//    FourthViewController *fvc=[[FourthViewController alloc]init];
-    
-//    vc.tabBarItem.image=[UIImage imageNamed:@""];
-//    svc.tabBarItem.image=[UIImage imageNamed:@""];
-//    tvc.tabBarItem.image=[UIImage imageNamed:@""];
-//    fvc.tabBarItem.image=[UIImage imageNamed:@""];
-    
-//    vc.tabBarItem.title=@"首页";
-//    
+  
     vc.navigationItem.title=@"此时";
-    
-//    vc.tabBarItem.badgeValue=@"123";
-//    svc.tabBarItem.title=@"扉页";
-//    tvc.tabBarItem.title=@"次页";
-//    fvc.tabBarItem.title=@"尾页";
-    
-//    vc.view.backgroundColor=[UIColor redColor];
-    
     UINavigationController *firstNav=[[UINavigationController alloc]initWithRootViewController:vc];
-    
-//     UINavigationController *secondtNav=[[UINavigationController alloc]initWithRootViewController:svc];
-//    
-//     UINavigationController *thirdNav=[[UINavigationController alloc]initWithRootViewController:tvc];
-//    
-//     UINavigationController *fourthNav=[[UINavigationController alloc]initWithRootViewController:fvc];
-//    
-//    UITabBarController *mainTabBarController =[[UITabBarController alloc]init];
-//    mainTabBarController.viewControllers=[NSArray arrayWithObjects:firstNav,secondtNav,thirdNav,fourthNav, nil];
-    
     self.window.rootViewController=firstNav;
-    
     return YES;
 }
 

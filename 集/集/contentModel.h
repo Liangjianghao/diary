@@ -12,6 +12,7 @@
 
 @property(nonatomic,strong)NSString *content;
 @property(nonatomic,strong)NSString *date;
+@property (nonatomic,strong)NSString *time;
 @property(nonatomic,strong)NSString *imgpath;
 @property(nonatomic,strong)NSString *longitude;
 @property(nonatomic,strong)NSString *latitude;

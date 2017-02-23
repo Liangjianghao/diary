@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		044D155E1E5E8B4D00A28A06 /* 120 - iPhone.png in Resources */ = {isa = PBXBuildFile; fileRef = 044D155C1E5E8B4D00A28A06 /* 120 - iPhone.png */; };
+		044D155F1E5E8B4D00A28A06 /* 180 - iPhone 6 Plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 044D155D1E5E8B4D00A28A06 /* 180 - iPhone 6 Plus.png */; };
+		044D15651E5E98B400A28A06 /* 375.png in Resources */ = {isa = PBXBuildFile; fileRef = 044D15641E5E98B400A28A06 /* 375.png */; };
+		044D15671E5EEBCE00A28A06 /* 376.png in Resources */ = {isa = PBXBuildFile; fileRef = 044D15661E5EEBCE00A28A06 /* 376.png */; };
 		0463B0891E5D67EA00E6985C /* 576485.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0463B0881E5D67EA00E6985C /* 576485.jpg */; };
 		0463B08C1E5D8DC100E6985C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 0463B08B1E5D8DC100E6985C /* MBProgressHUD.m */; };
 		CE06E0051DE3EA800075CD00 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CE06E0041DE3EA800075CD00 /* main.m */; };
@@ -26,12 +30,6 @@
 		CE06E04B1DE3ED780075CD00 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = CE06E0451DE3ED780075CD00 /* FMResultSet.m */; };
 		CE06E04E1DE3EDA10075CD00 /* contentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE06E04D1DE3EDA10075CD00 /* contentModel.m */; };
 		CE06E0501DE3F08D0075CD00 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = CE06E04F1DE3F08D0075CD00 /* libsqlite3.tbd */; };
-		CE34C31F1DFE9744006728E3 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE34C31D1DFE9744006728E3 /* SecondViewController.m */; };
-		CE34C3201DFE9744006728E3 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE34C31E1DFE9744006728E3 /* SecondViewController.xib */; };
-		CE34C3241DFE9757006728E3 /* ThirdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE34C3221DFE9757006728E3 /* ThirdViewController.m */; };
-		CE34C3251DFE9757006728E3 /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE34C3231DFE9757006728E3 /* ThirdViewController.xib */; };
-		CE34C3291DFE9766006728E3 /* FourthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE34C3271DFE9766006728E3 /* FourthViewController.m */; };
-		CE34C32A1DFE9766006728E3 /* FourthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE34C3281DFE9766006728E3 /* FourthViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		044D155C1E5E8B4D00A28A06 /* 120 - iPhone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "120 - iPhone.png"; sourceTree = "<group>"; };
+		044D155D1E5E8B4D00A28A06 /* 180 - iPhone 6 Plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "180 - iPhone 6 Plus.png"; sourceTree = "<group>"; };
+		044D15641E5E98B400A28A06 /* 375.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 375.png; sourceTree = "<group>"; };
+		044D15661E5EEBCE00A28A06 /* 376.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 376.png; sourceTree = "<group>"; };
 		0463B0881E5D67EA00E6985C /* 576485.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 576485.jpg; sourceTree = "<group>"; };
 		0463B08A1E5D8DC100E6985C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		0463B08B1E5D8DC100E6985C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
@@ -88,15 +90,6 @@
 		CE06E04C1DE3EDA10075CD00 /* contentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = contentModel.h; sourceTree = "<group>"; };
 		CE06E04D1DE3EDA10075CD00 /* contentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = contentModel.m; sourceTree = "<group>"; };
 		CE06E04F1DE3F08D0075CD00 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		CE34C31C1DFE9744006728E3 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		CE34C31D1DFE9744006728E3 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		CE34C31E1DFE9744006728E3 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
-		CE34C3211DFE9757006728E3 /* ThirdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdViewController.h; sourceTree = "<group>"; };
-		CE34C3221DFE9757006728E3 /* ThirdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdViewController.m; sourceTree = "<group>"; };
-		CE34C3231DFE9757006728E3 /* ThirdViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThirdViewController.xib; sourceTree = "<group>"; };
-		CE34C3261DFE9766006728E3 /* FourthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FourthViewController.h; sourceTree = "<group>"; };
-		CE34C3271DFE9766006728E3 /* FourthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FourthViewController.m; sourceTree = "<group>"; };
-		CE34C3281DFE9766006728E3 /* FourthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FourthViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +142,10 @@
 		CE06E0021DE3EA800075CD00 /* 集 */ = {
 			isa = PBXGroup;
 			children = (
+				044D15641E5E98B400A28A06 /* 375.png */,
+				044D15661E5EEBCE00A28A06 /* 376.png */,
+				044D155C1E5E8B4D00A28A06 /* 120 - iPhone.png */,
+				044D155D1E5E8B4D00A28A06 /* 180 - iPhone 6 Plus.png */,
 				0463B08A1E5D8DC100E6985C /* MBProgressHUD.h */,
 				0463B08B1E5D8DC100E6985C /* MBProgressHUD.m */,
 				CE06E0061DE3EA800075CD00 /* AppDelegate.h */,
@@ -177,15 +174,6 @@
 				CE06E0171DE3EA800075CD00 /* Info.plist */,
 				CE06E00F1DE3EA800075CD00 /* _.xcdatamodeld */,
 				CE06E0031DE3EA800075CD00 /* Supporting Files */,
-				CE34C31C1DFE9744006728E3 /* SecondViewController.h */,
-				CE34C31D1DFE9744006728E3 /* SecondViewController.m */,
-				CE34C31E1DFE9744006728E3 /* SecondViewController.xib */,
-				CE34C3211DFE9757006728E3 /* ThirdViewController.h */,
-				CE34C3221DFE9757006728E3 /* ThirdViewController.m */,
-				CE34C3231DFE9757006728E3 /* ThirdViewController.xib */,
-				CE34C3261DFE9766006728E3 /* FourthViewController.h */,
-				CE34C3271DFE9766006728E3 /* FourthViewController.m */,
-				CE34C3281DFE9766006728E3 /* FourthViewController.xib */,
 			);
 			path = "集";
 			sourceTree = "<group>";
@@ -278,12 +266,12 @@
 		CE06DFF81DE3EA800075CD00 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = ljh;
 				TargetAttributes = {
 					CE06DFFF1DE3EA800075CD00 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 8P6YYQ7PPB;
+						DevelopmentTeam = Y778U5JFED;
 					};
 					CE06E01B1DE3EA800075CD00 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -320,13 +308,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE34C3201DFE9744006728E3 /* SecondViewController.xib in Resources */,
 				CE06E0161DE3EA800075CD00 /* LaunchScreen.storyboard in Resources */,
+				044D15651E5E98B400A28A06 /* 375.png in Resources */,
+				044D15671E5EEBCE00A28A06 /* 376.png in Resources */,
+				044D155E1E5E8B4D00A28A06 /* 120 - iPhone.png in Resources */,
 				CE06E0131DE3EA800075CD00 /* Assets.xcassets in Resources */,
-				CE34C3251DFE9757006728E3 /* ThirdViewController.xib in Resources */,
 				0463B0891E5D67EA00E6985C /* 576485.jpg in Resources */,
-				CE34C32A1DFE9766006728E3 /* FourthViewController.xib in Resources */,
 				CE06E00E1DE3EA800075CD00 /* Main.storyboard in Resources */,
+				044D155F1E5E8B4D00A28A06 /* 180 - iPhone 6 Plus.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,8 +340,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE34C31F1DFE9744006728E3 /* SecondViewController.m in Sources */,
-				CE34C3241DFE9757006728E3 /* ThirdViewController.m in Sources */,
 				CE06E04E1DE3EDA10075CD00 /* contentModel.m in Sources */,
 				CE06E00B1DE3EA800075CD00 /* ViewController.m in Sources */,
 				CE06E0111DE3EA800075CD00 /* _.xcdatamodeld in Sources */,
@@ -364,7 +351,6 @@
 				CE06E0491DE3ED780075CD00 /* FMDatabasePool.m in Sources */,
 				CE06E0481DE3ED780075CD00 /* FMDatabaseAdditions.m in Sources */,
 				CE06E0461DE3ED780075CD00 /* DBManager.m in Sources */,
-				CE34C3291DFE9766006728E3 /* FourthViewController.m in Sources */,
 				CE06E04A1DE3ED780075CD00 /* FMDatabaseQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,8 +420,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -478,8 +466,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -507,9 +497,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y778U5JFED;
 				INFOPLIST_FILE = "集/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "TL.-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liang.memory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -519,9 +511,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				DEVELOPMENT_TEAM = Y778U5JFED;
 				INFOPLIST_FILE = "集/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "TL.-";
+				PRODUCT_BUNDLE_IDENTIFIER = com.liang.memory;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

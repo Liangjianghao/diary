@@ -23,6 +23,7 @@
     contentModel *todayModel;
     UITextView *textV;
     NSString *todayDate;
+    NSString *todayTime;
     NSString *tomorrowDate;
     NSString *userName;
     NSString *imgPath;
@@ -44,10 +45,15 @@
     rightbtn=[UIButton buttonWithType:UIButtonTypeCustom];
     rightbtn.frame=CGRectMake(0, 0,40, 30);
     [rightbtn setTitle:@"保存" forState:UIControlStateNormal];
-    [rightbtn setTitleColor:[UIColor colorWithDisplayP3Red:21/255.0 green:126/255.0 blue:251/255.0 alpha:1] forState:UIControlStateNormal];
+//    [rightbtn setTitleColor:[UIColor colorWithDisplayP3Red:21/255.0 green:126/255.0 blue:251/255.0 alpha:1] forState:UIControlStateNormal];
+    [rightbtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    rightbtn.backgroundColor=[UIColor grayColor];
     [rightbtn setBackgroundImage:[UIImage imageNamed:@"保存"] forState:UIControlStateNormal];
+    rightbtn.titleLabel.font=[UIFont systemFontOfSize:17];
     [rightbtn addTarget:self action:@selector(rightBtnClick:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.rightBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:rightbtn];
+    
+//    self.navigationController.navigationBar.barTintColor=[UIColor colorWithDisplayP3Red:21/255.0 green:126/255.0 blue:251/255.0 alpha:1];
     
     [self loadData];
     [self uiConfig];
@@ -63,14 +69,26 @@
     
     // Set the label text.
     hud.label.text = @"保存数据中,请稍候...";
-
+    NSString *content;
+    if (todayModel.content) {
+        UITextView *tv=[self.view viewWithTag:1001+dataArr.count-1];
+        content=tv.text;
+    }
+    else
+    {
+        content=textV.text;
+    }
+    NSLog(@"%@",content);
     
-    NSDictionary *contenDic=[NSDictionary dictionaryWithObjectsAndKeys:textV.text,@"content",todayDate,@"date",imgPath,@"imgpath",@"Longitude",@"Longitude",@"Latitude",@"Latitude",@"10101020",@"userID", nil];
+    NSDictionary *contenDic=[NSDictionary dictionaryWithObjectsAndKeys:content,@"content",todayDate,@"date",todayTime,@"time",imgPath,@"imgpath",@"Longitude",@"Longitude",@"Latitude",@"Latitude",@"10101020",@"userID", nil];
     
     [DBManager keepDataWithDictionary:contenDic withBlock:^(NSString *result) {
         if ([result isEqualToString:@"success"]) {
             hud.label.text=@"保存成功";
             [hud hideAnimated:YES afterDelay:1];
+            [self loadData];
+            [self uiConfig];
+            
         }
         else
         {
@@ -101,8 +119,15 @@
     NSString *date=[formatter stringFromDate:[NSDate date]];
     NSLog(@"date -->>%@",date);
     todayDate=date;
+
+    
+    NSLog(@"time %@",todayTime);
     tomorrowDate = [formatter stringFromDate:[NSDate dateWithTimeInterval:24*60*60 sinceDate:[NSDate date]]];//后一天
 
+    [formatter setDateFormat:@"HH:mm:ss"];
+    NSString *time=[formatter stringFromDate:[NSDate date]];
+    todayTime=time;
+    
     todayModel =[DBManager todayWithDate:date];
 
     [self nowViewConifg];
@@ -128,7 +153,7 @@
     
     UIImageView *imgV=[[UIImageView alloc]init];
     imgV.frame=CGRectMake(5, 10, WIDTH-30, (WIDTH-30)*3/4.0);
-    [imgV setImage:[UIImage imageNamed:@"576485.jpg"]];
+    [imgV setImage:[UIImage imageNamed:@"375.png"]];
     [baseV addSubview:imgV];
     if (todayModel.content) {
         imgV.tag=102;
@@ -155,9 +180,9 @@
     textV.frame=CGRectMake(0,0, WIDTH-30, 150);
     textV.delegate=self;
     textV.backgroundColor=[UIColor whiteColor];
-    textV.tag=1002;
+    textV.tag=2001;
     textV.textColor=[UIColor lightGrayColor];
-
+    textV.font=[UIFont systemFontOfSize:17];
     [bgView addSubview:textV];
     
     [baseV addSubview:bgView];
@@ -174,7 +199,7 @@
     
     UILabel *userLabel=[[UILabel alloc]init];
     userLabel.frame=CGRectMake(WIDTH-120, HEIGHT-20-64-55, 100, 40);
-    userLabel.text=@"userName";
+    userLabel.text=[NSString stringWithFormat:@"%@",todayTime];
     userLabel.textColor=[UIColor lightGrayColor];
 
     [baseV addSubview:userLabel];
@@ -186,7 +211,7 @@
     }
     else
     {
-        textV.text = @"所思，所想...";
+        textV.text = @"添加文字记忆...";
         timeLabel.text=todayDate;
 
         
@@ -229,17 +254,24 @@
             NSLog(@"image");
             [imgV setImage:image];
         }
+        else
+        {
+            [imgV setImage:[UIImage imageNamed:@"376.png"]];
+        }
         [baseV addSubview:imgV];
         
         UITextView *textView=[[UITextView alloc]init];
         textView.frame=CGRectMake(5, (WIDTH-30)*3/4.0+20, WIDTH-30, 150);
         textView.delegate=self;
         textView.backgroundColor=[UIColor groupTableViewBackgroundColor];
-        textView.tag=1001;
+        textView.tag=1001+i;
         textView.text = [NSString stringWithFormat:@"%@",[dataArr[i] content]];
         textView.textColor = [UIColor lightGrayColor];
         textView.editable=NO;
         [baseV addSubview:textView];
+        
+        textView.textColor=[UIColor blackColor];
+        textView.font=[UIFont systemFontOfSize:17];
         
         UILabel *timeLabel=[[UILabel alloc]init];
         timeLabel.frame=CGRectMake(10, HEIGHT-20-64-55, 100, 40);
@@ -250,7 +282,7 @@
         
         UILabel *userLabel=[[UILabel alloc]init];
         userLabel.frame=CGRectMake(WIDTH-120, HEIGHT-20-64-55, 100, 40);
-        userLabel.text=[NSString stringWithFormat:@"%@",[dataArr[i] userID]];
+        userLabel.text=[NSString stringWithFormat:@"%@",[dataArr[i] time]];
         userLabel.textColor=[UIColor lightGrayColor];
         
         [baseV addSubview:userLabel];
@@ -264,8 +296,15 @@
                 imgV.userInteractionEnabled=YES;
                 imgV.tag=101;
                 textView.editable=YES;
-//                rightbtn.hidden=NO;
-//                rightbtn.backgroundColor=[UIColor yellowColor];
+                UIImage *image=[UIImage imageWithContentsOfFile:[NSString stringWithFormat:@"%@/Library/%@.jpg",NSHomeDirectory(),[dataArr[i] imgpath]]];
+                if (image) {
+                    NSLog(@"image");
+                    [imgV setImage:image];
+                }
+                else
+                {
+                    [imgV setImage:[UIImage imageNamed:@"375.png"]];
+                }
 
             }
         }
@@ -285,7 +324,7 @@
 }
 - (void)textViewDidBeginEditing:(UITextView *)textView
 {
-    if ([textView.text isEqualToString:@"所思，所想..."]) {
+    if ([textView.text isEqualToString:@"添加文字记忆..."]) {
         textView.text = @"";
         textView.textColor = [UIColor blackColor]; //optional
     }
@@ -299,7 +338,7 @@
 - (void)textViewDidEndEditing:(UITextView *)textView
 {
     if ([textView.text isEqualToString:@""]) {
-        textView.text = @"所思，所想...";
+        textView.text = @"添加文字记忆...";
         textView.textColor = [UIColor lightGrayColor]; //optional
     }
     [textView resignFirstResponder];
@@ -365,9 +404,9 @@
     
 //    [mainScroll setContentOffset:CGPointMake(WIDTH*(dataArr.count),0) animated:YES];
     
-    [self loadData];
-    
-    [self uiConfig];
+//    [self loadData];
+//    
+//    [self uiConfig];
     
     [self dismissViewControllerAnimated:picker completion:^{
         
